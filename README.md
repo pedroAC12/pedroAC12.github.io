@@ -12,7 +12,7 @@ La práctica consiste en generar una **guía de estilo** (rellenando el document
 -   Se deberán de utilizar *JPanels* sobre la ventana y se recomienda como **layout** el *Free Design* para la ventana superior y el *Null Layout* para el panel principal.
 
 
-   ![](media/CalculadoraNormal.png)
+   ![](media/calculadora.png)
 
 
 ## Parte 2
