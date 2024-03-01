@@ -1,9 +1,9 @@
 # pedroAC12.github.io
-# Práctica 3.1 Usabilidad básica (guía de estilo) e instalación
+# Proyecto final asignatura Desarrollo de Interfaces
 
-Esta práctica sirve como base de varios de los contenidos mínimos que debe cumplir el primer proyecto trimestral evaluable del módulo de Desarrollo de Interfaces.
+Esta practica consiste en el desarrollo de una Calculadora con multiples funcionalidades
 
-## Parte 1
+## Calculadora Normal
 
 La práctica consiste en generar una **guía de estilo** (rellenando el documento modelo propuesto) y seguir algunas de las reglas básicas de **usabilidad** vistas, personalizando y reorganizando mediante paneles las ventanas de la aplicación desarrollada previamente:
 
