@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="Principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="666.0" prefWidth="334.0" style="-fx-background-color: #424545;" styleClass="principal" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.calculadoraController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#calcCientifica" text="Cientifica" />
+                  <MenuItem mnemonicParsing="false" onAction="#conversor" text="Conversor" />
+                  <MenuItem mnemonicParsing="false" onAction="#Graficos" text="Graficos" />
+              <MenuItem mnemonicParsing="false" onAction="#salirCalc" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edición">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#resetAll" text="Reset" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="28.0" prefWidth="328.0" />
+      <HBox alignment="CENTER" prefHeight="123.0" prefWidth="328.0">
+         <children>
+            <Pane prefHeight="101.0" prefWidth="282.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2;">
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="l_memoria" alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="275.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="l_resultado" alignment="BOTTOM_RIGHT" layoutX="-6.0" layoutY="35.0" prefHeight="59.0" prefWidth="282.0" styleClass="pantalla" text="0">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_MR" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doMR" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #9a6da1;" styleClass="boton" text="MR" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_Mplus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Mplus" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #9a6da1;" styleClass="boton" text="M+" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_Mminus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doMminus" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #9a6da1;" styleClass="boton" text="M-" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_M" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showM" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #9a6da1;" styleClass="boton" text="M" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_del" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doDel" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: cf5b02;" styleClass="boton" text="DEL" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_ce" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#borrarPantalla" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="CE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_c" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#borrarTodo" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="C" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_div" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="/" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="334.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="7" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="8" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="9" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_mult" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="x" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="4" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="5" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="6" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_rest" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="-" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="334.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="2" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" stylesheets="@style.css" text="3" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_sum" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="+" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="328.0" spacing="20.0">
+         <children>
+            <Button fx:id="b_sig" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doSign" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="+/-" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: #c9c7c7; -fx-border-color: #4a4949; -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="boton" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_coma" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #7cbec4;" styleClass="boton" text="," textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="b_igual" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doOperation" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #025bcf;" styleClass="boton" text="=" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </HBox>
+      <Pane prefHeight="58.0" prefWidth="257.0">
+         <children>
+            <Pane fx:id="P_Memory" layoutX="20.0" prefHeight="58.0" prefWidth="282.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 50; -fx-border-radius: 50;">
+               <children>
+                  <Label fx:id="L_Memory" contentDisplay="RIGHT" layoutX="104.0" layoutY="4.0" prefHeight="52.0" prefWidth="165.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="-1.0" prefHeight="58.0" prefWidth="92.0" text="Memoria:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

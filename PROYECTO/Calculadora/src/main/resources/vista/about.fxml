@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="principal_about" prefHeight="244.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.aboutController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" text="PROYECTO INTERFACES" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="62.0" text="2ª Evaluacion DAM 2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="122.0" text="Creado por ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="149.0" text="Pedro Ardaiz Camacho">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="b_salir" layoutX="81.0" layoutY="191.0" mnemonicParsing="false" onAction="#salir" prefHeight="39.0" prefWidth="82.0" text="Salir">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.boton:hover{
+    -fx-border-width: 4;
+}
+
+@media  screen and (min-width: 350px) and (max-width:600px){
+    .boton, .principal, .pantalla{
+       -fx-scale-x; 1.2;
+       -fx-scale-y: 1.2;
+    }
+
+}

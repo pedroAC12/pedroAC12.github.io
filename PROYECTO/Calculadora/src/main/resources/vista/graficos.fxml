@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="946.0" style="-fx-background-color: #424545;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.graficosController">
+    <children>
+      <MenuBar prefHeight="25.0" prefWidth="946.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#calcNormal" text="Normal" />
+                  <MenuItem mnemonicParsing="false" onAction="#calcCientifica" text="Cientifica" />
+                  <MenuItem mnemonicParsing="false" onAction="#conversor" text="Conversor" />
+                  <MenuItem mnemonicParsing="false" onAction="#salirCalc" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edición">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#resetAll" text="Reset" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+        <Label layoutX="53.0" layoutY="56.0" text="Ingrese la función matemática:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+        <TextField fx:id="funcionTextField" layoutX="53.0" layoutY="89.0" prefHeight="27.0" prefWidth="243.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <LineChart fx:id="graficoFuncion" layoutX="26.0" layoutY="151.0" prefHeight="431.0" prefWidth="894.0">
+            <xAxis>
+                <NumberAxis side="BOTTOM" style="-fx-background-color: #424545;" tickLabelFill="WHITE">
+               <tickLabelFont>
+                  <Font size="11.0" />
+               </tickLabelFont></NumberAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="WHITE">
+               <tickLabelFont>
+                  <Font size="12.0" />
+               </tickLabelFont></NumberAxis>
+            </yAxis>
+        </LineChart>
+      <Button fx:id="b_limpiar" layoutX="274.0" layoutY="588.0" mnemonicParsing="false" onAction="#limpiarPantalla" text="Limpiar">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="b_dibujar" layoutX="547.0" layoutY="588.0" mnemonicParsing="false" onAction="#dibujarFuncion" text="Dibujar">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="353.0" layoutY="56.0" text="Funciones disponibles:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="353.0" layoutY="100.0" prefHeight="17.0" prefWidth="470.0" text="sin(x)      cos(x)       x       x^2      x^3      log(x)  " textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
