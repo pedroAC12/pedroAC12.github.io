@@ -1,7 +1,5 @@
-title: ProyectoPedro
-lang: es
-description: Proyecto Interfaces Pedro Ardaiz
 theme: jekyll-theme-cayman
-
+title: ProyectoPedro
+description: Proyecto Interfaces Pedro Ardaiz
 plugins:
-  - jekyll-seo-tag
+- jekyll-seo-tag
