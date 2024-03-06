@@ -1,4 +1,7 @@
 title: ProyectoPedro
 lang: es
 description: Proyecto Interfaces Pedro Ardaiz
-remo_theme: rundocs/jekyll-rtd-theme
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
